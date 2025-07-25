@@ -600,112 +600,161 @@
       font-size: 1.2rem;
     }
     
-    /* Contact Section */
-    form {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      padding: 3rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-    }
-    
-    .form-group {
-      margin-bottom: 1.8rem;
-    }
-    
-    form label {
-      display: block;
-      margin-bottom: 0.7rem;
-      font-weight: 500;
-      color: var(--dark);
-      font-size: 0.95rem;
-    }
-    
-    form input, form textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 1px solid var(--light-gray);
-      border-radius: var(--border-radius);
-      font-size: 1rem;
-      transition: var(--transition);
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    form input:focus, form textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-    }
-    
-    form textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    form button {
-      background: var(--primary);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: var(--transition);
-      width: 100%;
-      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-family: 'Montserrat', sans-serif;
-    }
-    
-    form button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-    }
-    
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 4rem;
-    }
-    
-    .info-card {
-      display: flex;
-      align-items: flex-start;
-      background: white;
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
-      border-left: 4px solid var(--primary);
-    }
-    
-    .info-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .info-card i {
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-right: 1.5rem;
-      margin-top: 5px;
-    }
-    
-    .info-content h4 {
-      margin-bottom: 0.7rem;
-      color: var(--dark);
-      font-size: 1.2rem;
-    }
-    
-    .info-content p {
-      color: var(--gray);
-      line-height: 1.7;
-    }
+/* Contact Section */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #0a1a3a; /* Dark blue background */
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    0 6px 6px rgba(0, 0, 0, 0.2),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.1),
+    inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+form::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(16, 42, 90, 0.8), 
+    rgba(33, 64, 128, 0.9), 
+    rgba(5, 15, 40, 0.8));
+  z-index: -1;
+  border-radius: 14px;
+  transform: translateZ(-10px);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  box-shadow: 
+    inset 0 1px 3px rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #3a7bd5;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    inset 0 1px 3px rgba(0, 0, 0, 0.5),
+    0 0 0 3px rgba(58, 123, 213, 0.2);
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+form button {
+  background: linear-gradient(135deg, #3473cb, #33b4d1);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 2px 3px rgba(0, 0, 0, 0.2),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #157c94, #3365ac);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.2);
+}
+
+form button:active {
+  transform: translateY(1px);
+}
+
+/* Rest of the styles remain unchanged */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--primary);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-card i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-right: 1.5rem;
+  margin-top: 5px;
+}
+
+.info-content h4 {
+  margin-bottom: 0.7rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.info-content p {
+  color: var(--gray);
+  line-height: 1.7;
+}
     
     /* Footer */
     footer {
@@ -1633,66 +1682,95 @@
   </section>
 
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Get In Touch</h2>
-      </div>
-      
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required />
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        
-        <button type="submit">Send Message</button>
-      </form>
-      
-      <div class="contact-info">
-        <div class="info-card">
-          <i class="fas fa-envelope"></i>
-          <div class="info-content">
-            <h4>Email Us</h4>
-            <p>info@stellsync.com</p>
-          </div>
-        </div>
-        
-        <div class="info-card">
-          <i class="fas fa-phone-alt"></i>
-          <div class="info-content">
-            <h4>Call Us</h4>
-            <p>+94 71 987 6543 (Sales)</p>
-            <p>+94 76 543 2109 (Support)</p>
-          </div>
-        </div>
-        
-        <!-- <div class="info-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="info-content">
-            <h4>Visit Us</h4>
-            <p>No. 123, Tech Street</p>
-            <p>Colombo 05, Sri Lanka</p>
-          </div>
-        </div> -->
-      </div>
+ <!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
     </div>
-  </section>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="example@abcd.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input 
+          type="text" 
+          id="subject" 
+          name="subject" 
+          required 
+          placeholder="What’s the topic?"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="5" 
+          required 
+          placeholder="Write your message here..."
+        ></textarea>
+      </div>
+
+      <button type="submit">
+  <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+</button>
+
+    </form>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <i class="fas fa-envelope"></i>
+        <div class="info-content">
+          <h4>Email Us</h4>
+          <p>info@stellsync.com</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <i class="fas fa-phone-alt"></i>
+        <div class="info-content">
+          <h4>Call Us</h4>
+          <p>+94 71 460 0333</p>
+        </div>
+      </div>
+
+      <!-- <div class="info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="info-content">
+          <h4>Visit Us</h4>
+          <p>No. 123, Tech Street</p>
+          <p>Colombo 05, Sri Lanka</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
@@ -1808,7 +1886,7 @@
 
     /* Header */
     #chatbot-header {
-      background: #2563eb;
+      background: #1f4cac;
       color: white;
       padding: 12px;
       font-weight: bold;
