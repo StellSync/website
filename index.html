@@ -604,7 +604,7 @@
 form {
   max-width: 700px;
   margin: 0 auto;
-  background: #0a1a3a; /* Dark blue background */
+  background: #ffffff; /* Dark blue background */
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 
@@ -627,9 +627,9 @@ form::before {
   right: -2px;
   bottom: -2px;
   background: linear-gradient(45deg, 
-    rgba(16, 42, 90, 0.8), 
-    rgba(33, 64, 128, 0.9), 
-    rgba(5, 15, 40, 0.8));
+    rgba(255, 255, 255, 0.921), 
+    rgb(253, 254, 255), 
+    rgba(255, 255, 255, 0.978));
   z-index: -1;
   border-radius: 14px;
   transform: translateZ(-10px);
@@ -645,9 +645,9 @@ form label {
   display: block;
   margin-bottom: 0.7rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(11, 11, 11, 0.9);
   font-size: 0.95rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 form input, form textarea {
@@ -658,8 +658,8 @@ form input, form textarea {
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-  background: rgba(0, 0, 0, 0.2);
-  color: white;
+  background: rgba(253, 250, 250, 0.842);
+  color: rgb(0, 0, 0);
   box-shadow: 
     inset 0 1px 3px rgba(0, 0, 0, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.05);
@@ -667,8 +667,8 @@ form input, form textarea {
 
 form input:focus, form textarea:focus {
   outline: none;
-  border-color: #3a7bd5;
-  background: rgba(0, 0, 0, 0.3);
+  border-color: #dbe4ef;
+  background: rgba(209, 207, 207, 0.3);
   box-shadow: 
     inset 0 1px 3px rgba(0, 0, 0, 0.5),
     0 0 0 3px rgba(58, 123, 213, 0.2);
@@ -680,8 +680,8 @@ form textarea {
 }
 
 form button {
-  background: linear-gradient(135deg, #3473cb, #33b4d1);
-  color: white;
+  background: linear-gradient(135deg, #d8dee6, #ebf5f8);
+  color: rgb(8, 8, 8);
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
@@ -691,9 +691,9 @@ form button {
   transition: all 0.3s ease;
   width: 100%;
   box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.3),
-    0 2px 3px rgba(0, 0, 0, 0.2),
-    inset 0 -2px 5px rgba(255, 255, 255, 0.1);
+    0 4px 15px rgba(229, 227, 227, 0.3),
+    0 2px 3px rgba(251, 251, 251, 0.684),
+    inset 0 -2px 5px rgba(238, 237, 237, 0.622);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Montserrat', sans-serif;
@@ -702,7 +702,7 @@ form button {
 }
 
 form button:hover {
-  background: linear-gradient(135deg, #157c94, #3365ac);
+  background: linear-gradient(135deg, #78d5ea, #558fda);
   transform: translateY(-3px);
   box-shadow: 
     0 8px 25px rgba(0, 0, 0, 0.4),
